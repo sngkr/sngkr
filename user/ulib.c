@@ -106,7 +106,7 @@ memmove(void *vdst, const void *vsrc, int n)
   if (src > dst) {
     while(n-- > 0)
       *dst++ = *src++;
-  } else {
+  } else {//线性的考虑这两个指针，结合思考为什么是被复制的字符串地址为const
     dst += n;
     src += n;
     while(n-- > 0)

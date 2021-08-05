@@ -59,7 +59,7 @@ ls(char *path)
         continue;
       memmove(p, de.name, DIRSIZ);
       p[DIRSIZ] = 0;
-      if(stat(buf, &st) < 0){
+      if(stat(buf, &st) < 0){//stat()函数成功返回0失败返回-1，fstat()一样
         printf("ls: cannot stat %s\n", buf);
         continue;
       }
